@@ -1,0 +1,2 @@
+- Selector xxx. does not parse and prevents autocompletion from working
+- position of '=' in FunClause is not available

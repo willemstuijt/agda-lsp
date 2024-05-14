@@ -1,0 +1,69 @@
+cabal-version:       2.2
+
+name:                AgdaLSP
+version:             0.1.0.0
+-- synopsis:
+-- description:
+homepage:            https://github.com/githubuser/AgdaLSP#readme
+license:             BSD-3-Clause
+license-file:        LICENSE
+author:              Author name here
+maintainer:          example@example.com
+copyright:           2023 Author name here
+category:            Web
+build-type:          Simple
+extra-source-files:  README.md
+                     CHANGELOG.md
+
+executable AgdaLSP
+  hs-source-dirs:      src
+  main-is:             Main.hs
+  other-modules:
+    Handlers
+    AgdaToLSP
+    Benchmarks
+    CodeActions
+    Completions
+    ImplicitsScope
+    ImplicitsDecls
+    Diagnostics
+    Core
+    Rename
+    ScopeAnalysis
+    ScopeAnalysisImplicitsTests
+    ScopeAnalysisTests
+    ScopeImport
+    ScopeMap
+    Scope
+    SemanticTokens
+    SmokeTest
+    State
+    Traversal
+  default-language:    Haskell2010
+  default-extensions: ImportQualifiedPost
+  build-depends:       base >= 4.7 && < 5
+                     , Agda
+                     , lsp
+                     , co-log-core
+                     , lens
+                     , containers
+                     , unordered-containers
+                     , text
+                     , criterion
+                     , aeson
+                     , directory
+                     , filepath
+                     , random
+                     , mtl
+                     , aeson
+                     , aeson-pretty
+                     , bytestring
+  ghc-options:         -Wall
+                       -Wcompat
+                       -Widentities
+                       -Wincomplete-record-updates
+                       -Wincomplete-uni-patterns
+                       -Wmissing-export-lists
+                       -Wmissing-home-modules
+                       -Wpartial-fields
+                       -Wredundant-constraints
